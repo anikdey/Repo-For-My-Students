@@ -1,4 +1,4 @@
-package dataStructure.stack;
+package saccha;
 
 import java.util.EmptyStackException;
 
