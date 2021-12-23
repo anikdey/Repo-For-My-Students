@@ -49,6 +49,19 @@ public class CircularArrayQueue {
         }
     }
 
+    public int size(){
+        if (isEmpty()){
+            return 0;
+        }else{
+            int temp =front;
+            int count=0;
+            while (temp!=rear){
+                temp=(temp+1)% queue.length;count++;
+            }
+            return count+1;
+        }
+    }
+
     public boolean isFull(){
         return rear+1 == queue.length;
     }

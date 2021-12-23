@@ -55,4 +55,13 @@ public class ArrayBasedQueue {
         }
         System.out.println();
     }
+
+    public int size(){
+        if (isEmpty()){
+            return 0;
+        }else{
+            return tail-head+1;
+        }
+
+    }
 }
