@@ -13,20 +13,20 @@ public class CircularArrayQueue {
         queue = new int[size];
     }
 
-    void enqueue(int data){
+    void enqueue(int data) throws Exception {
         if(isEmpty()){
             front = rear =0;
             queue[rear]=data;
         }else if(isFull()){
-            throw new ArithmeticException("this circular queue is full");
+            throw new Exception("this circular queue is full");
         }else {
             rear =(rear+1)% queue.length;
             queue[rear]=data;
         }
     }
-    void deQueue(){
+    void deQueue() throws Exception {
         if (isEmpty()){
-            throw new ArithmeticException("this queue is empty");
+            throw new Exception("this queue is empty");
         }else if(front == rear){
             front = rear =-1;
         }else{
@@ -35,9 +35,9 @@ public class CircularArrayQueue {
         }
     }
 
-    public void printQueue(){
+    public void printQueue() throws Exception {
         if (isEmpty()){
-            throw new ArithmeticException("this que is empty");
+            throw new Exception("this que is empty");
         }else{
             int i =front;
             while (i!=rear){
@@ -46,6 +46,19 @@ public class CircularArrayQueue {
             }
             System.out.print(queue[i]);
             System.out.println();
+        }
+    }
+
+    public int size(){
+        if (isEmpty()){
+            return 0;
+        }else{
+            int temp =front;
+            int count=0;
+            while (temp!=rear){
+                temp=(temp+1)% queue.length;count++;
+            }
+            return count+1;
         }
     }
 

@@ -52,7 +52,7 @@ public class ArrayBasedStack{
 
     public int getTop() {
         if (top ==-1){
-            throw new ArrayIndexOutOfBoundsException("no data exists on stack");
+            throw new EmptyStackException();
         }
         return stack[top];
     }

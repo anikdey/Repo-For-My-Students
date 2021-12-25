@@ -33,9 +33,9 @@ public class ArrayBasedQueue {
         tail++;
         queue[tail]=data;
     }
-    public int deQueue(){
+    public int deQueue() throws Exception {
         if (isEmpty()){
-            throw new ArithmeticException ("queue is empty");
+            throw new Exception("queue is empty");
         }else if(queue.length/2 == tail-head+1){
             int[] temp =queue;
             queue = new int[queue.length/2];
@@ -54,5 +54,14 @@ public class ArrayBasedQueue {
             System.out.print(queue[i]+", ");
         }
         System.out.println();
+    }
+
+    public int size(){
+        if (isEmpty()){
+            return 0;
+        }else{
+            return tail-head+1;
+        }
+
     }
 }
