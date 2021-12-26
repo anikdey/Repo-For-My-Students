@@ -1,4 +1,4 @@
-package saccha.queueUseingStack;
+package saccha.queueUseingStack;     // i tryed this implementation at my own.this is a wrong implementation
 
 import java.util.EmptyStackException;
 
