@@ -32,7 +32,7 @@ public class QueueUseStack {
             return data;
         }
     }
-    public void print(){  //not a parfect implemented
+    public void print(){  //not a parfect implementation
         int[] temp = new int[size];
         int index =0;
         for (int i = size - 1; i >= 0; i--) {
