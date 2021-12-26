@@ -1,9 +1,10 @@
-package saccha;
+package saccha.queue;
 
 public class CircularArrayQueue {
 
     int front = -1;
     int rear = -1;
+    int size=0;
     private int[] queue;
 
     public CircularArrayQueue(){
@@ -17,11 +18,13 @@ public class CircularArrayQueue {
         if(isEmpty()){
             front = rear =0;
             queue[rear]=data;
+            size++;
         }else if(isFull()){
             throw new Exception("this circular queue is full");
         }else {
             rear =(rear+1)% queue.length;
             queue[rear]=data;
+            size++;
         }
     }
     void deQueue() throws Exception {
@@ -29,9 +32,11 @@ public class CircularArrayQueue {
             throw new Exception("this queue is empty");
         }else if(front == rear){
             front = rear =-1;
+            size=0;
         }else{
             System.out.println(queue[front]);
             front = (front+1)% queue.length;
+            size--;
         }
     }
 
@@ -49,17 +54,8 @@ public class CircularArrayQueue {
         }
     }
 
-    public int size(){
-        if (isEmpty()){
-            return 0;
-        }else{
-            int temp =front;
-            int count=0;
-            while (temp!=rear){
-                temp=(temp+1)% queue.length;count++;
-            }
-            return count+1;
-        }
+    public int getSize(){
+       return size;
     }
 
     public boolean isFull(){
