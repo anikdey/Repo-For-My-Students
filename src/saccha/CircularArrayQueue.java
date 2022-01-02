@@ -56,7 +56,8 @@ public class CircularArrayQueue {
             int temp =front;
             int count=0;
             while (temp!=rear){
-                temp=(temp+1)% queue.length;count++;
+                temp=(temp+1)% queue.length;
+                count++;
             }
             return count+1;
         }
