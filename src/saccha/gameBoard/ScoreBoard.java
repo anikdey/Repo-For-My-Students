@@ -1,4 +1,4 @@
-package gameBoard;
+package saccha.gameBoard;
 
 import java.util.Scanner;
 

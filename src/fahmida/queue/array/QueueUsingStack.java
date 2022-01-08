@@ -1,4 +1,4 @@
-package queue.array;
+package fahmida.queue.array;
 
 public class QueueUsingStack {
 

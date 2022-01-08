@@ -1,4 +1,4 @@
-package gameBoard;
+package saccha.gameBoard;
 
 public class ScoreEntry {
 
