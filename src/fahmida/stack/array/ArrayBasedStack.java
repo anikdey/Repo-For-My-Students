@@ -1,17 +1,17 @@
-package stack.array;
+package fahmida.stack.array;
 import java.util.EmptyStackException;
 
-public class arrayBasedStack {
+public class ArrayBasedStack {
 
     static int n = 4;
     private int top = -1;
     private int[] stack;
 
-    public arrayBasedStack(int size){
+    public ArrayBasedStack(int size){
         stack = new int[size];
     }
 
-    public arrayBasedStack(){
+    public ArrayBasedStack(){
         stack = new int[n];
     }
 
@@ -87,7 +87,7 @@ public class arrayBasedStack {
     }
 
     public static void main(String[] args) {
-        arrayBasedStack s = new arrayBasedStack();
+        ArrayBasedStack s = new ArrayBasedStack();
 
         s.push(34);
         s.push(65);
