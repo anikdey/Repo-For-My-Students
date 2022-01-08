@@ -1,4 +1,4 @@
-package saccha;
+package saccha.stack;
 
 import java.util.EmptyStackException;
 

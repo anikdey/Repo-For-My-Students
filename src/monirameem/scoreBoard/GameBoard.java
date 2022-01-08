@@ -16,7 +16,6 @@ public class GameBoard {
             if(playerNum < board.length)
                 playerNum++;
 
-
             int temp = playerNum-1;
 
             while (temp > 0 && board[temp -1].score < newScore){
@@ -47,8 +46,6 @@ public class GameBoard {
         board.addScore(new Score("mimi",55));
 
         board.printScore();
-
-
 
     }
 }
