@@ -1,4 +1,4 @@
-package saccha;
+package saccha.queue;
 
 public class ArrayBasedQueue {
 
