@@ -9,7 +9,7 @@ public class GameBoard {
         ScoreBoard = new int [size];
     }
 
-    public void ScoreAdd(Score score){
+    public void ScoreAdd(gameProject.Score score){
 
     }
     

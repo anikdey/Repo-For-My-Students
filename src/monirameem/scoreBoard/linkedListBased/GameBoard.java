@@ -3,7 +3,7 @@ package monirameem.scoreBoard.linkedListBased;
 public class GameBoard {
 
     Node head = null;
-    int lastPlayer = 0;
+//    int lastPlayer = 0;
     int size = 0;
 
     public void addScore(Score newScore) {
@@ -37,7 +37,6 @@ public class GameBoard {
             System.out.println("Invalid index");
             return null;
         }
-
         if (index == 0){
             temp = head.score;
             head = head.next;
