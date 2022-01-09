@@ -3,7 +3,7 @@ package monirameem.scoreBoard;
 public class GameBoard {
 
     Score[] board;
-    int playerNum = -1;
+    int lastPlayerNum = -1;
 
     GameBoard(int size) {
         board = new Score[size];
@@ -12,11 +12,11 @@ public class GameBoard {
     public void addScore(Score score) {
         int newScore = score.score;
 
-        if (playerNum < board.length-1 || newScore > board[playerNum].score){
-            if(playerNum < board.length-1)
-                playerNum++;
+        if (lastPlayerNum < board.length-1 || newScore > board[lastPlayerNum].score){
+            if(lastPlayerNum < board.length-1)
+                lastPlayerNum++;
 
-            int temp = playerNum;
+            int temp = lastPlayerNum;
 
             while (temp > 0 && board[temp -1].score < newScore){
                 board[temp] = board[temp-1];
@@ -26,18 +26,39 @@ public class GameBoard {
         }
     }
 
+    public void remove(int index) {
+
+        if (index <= 0){
+            System.out.println("Invalid index");
+            return;
+        } else if (index > lastPlayerNum+1){
+            System.out.println("Invalid index");
+            return;
+        }
+
+        int temp = index-1;
+
+        while (temp < lastPlayerNum){
+            board[temp] = board[temp+1];
+            temp++;
+        }
+        board[temp] = null;
+        lastPlayerNum--;
+    }
+
     public void printScore() {
 
         if (board != null){
             for (Score score : board){
-                System.out.println("Name : " + score.name + "Score : " + score.score);
+                if (score == null)
+                    return;
+                System.out.println("Name : " + score.name + " Score : " + score.score);
+
             }
         }
     }
 
-
     public static void main(String[] args) {
-
 
         GameBoard board = new GameBoard(3);
 
