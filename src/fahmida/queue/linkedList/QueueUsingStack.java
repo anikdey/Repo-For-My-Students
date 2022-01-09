@@ -1,6 +1,4 @@
-package queue.linkedList;
-
-import singleLinkedList.SingleLinkedList;
+package fahmida.queue.linkedList;
 
 public class QueueUsingStack {
 

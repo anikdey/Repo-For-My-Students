@@ -1,4 +1,4 @@
-package queue.linkedList;
+package fahmida.queue.linkedList;
 
 import org.w3c.dom.Node;
 

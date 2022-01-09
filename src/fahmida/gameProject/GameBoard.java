@@ -1,4 +1,4 @@
-package gameProject;
+package fahmida.gameProject;
 
 public class GameBoard {
 

@@ -1,4 +1,4 @@
-package stack.linkedList;
+package fahmida.stack.linkedList;
 
 import java.util.EmptyStackException;
 
