@@ -12,12 +12,11 @@ public class GameBoard {
     public void addScore(Score score) {
         int newScore = score.score;
 
-        if (playerNum < board.length || newScore > board[playerNum-1].score){
-
-            if(playerNum < board.length)
+        if (playerNum < board.length-1 || newScore > board[playerNum].score){
+            if(playerNum < board.length-1)
                 playerNum++;
 
-            int temp = playerNum-1;
+            int temp = playerNum;
 
             while (temp > 0 && board[temp -1].score < newScore){
                 board[temp] = board[temp-1];
