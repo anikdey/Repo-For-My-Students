@@ -5,9 +5,9 @@ public class ScoreEntry {
     private int score;
     private String name;
 
-    public ScoreEntry(int score,String name){
-        this.score =score;
+    public ScoreEntry(String name,int score){
         this.name=name;
+        this.score=score;
     }
     public int getScore(){
         return score;
