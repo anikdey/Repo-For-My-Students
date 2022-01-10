@@ -12,15 +12,15 @@ public class CryptoGraph {
             if (c >= 'A' && c <= 'Z'){
                 int temp = c + offset;
                 if (temp > 90){
-                    temp-=26;
+                    temp -= 26;
                 }
-                output+= (char) temp;
+                output += (char) temp;
             }else if(c >= 'a' && c <= 'z'){
                 int temp = c + offset;
-                if (temp >122){
-                    temp-=26;
+                if (temp > 122){
+                    temp -= 26;
                 }
-                output+=(char) temp;
+                output += (char) temp;
             }
         }
 
