@@ -1,4 +1,5 @@
-package gameProject;
+package fahmida.gameProject;
+
 
 public class GameBoard {
 
@@ -11,7 +12,7 @@ public class GameBoard {
     public GameBoard (int capacity){
 
         this.capacity = capacity;
-        scores = new Score [capacity];
+        scores = new Score[capacity];
     }
     public void scoreAdd(Score score){
 
