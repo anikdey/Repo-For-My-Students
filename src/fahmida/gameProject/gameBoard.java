@@ -1,4 +1,8 @@
 package fahmida.gameProject;
+<<<<<<< HEAD:src/fahmida/gameProject/gameBoard.java
+=======
+
+>>>>>>> 3a6592de2c0eb8cbe99b991954ba346c3d46fee3:src/fahmida/gameProject/GameBoard.java
 
 public class gameBoard {
 
@@ -11,7 +15,7 @@ public class gameBoard {
     public gameBoard(int capacity){
 
         this.capacity = capacity;
-        scores = new Score [capacity];
+        scores = new Score[capacity];
     }
     public void scoreAdd(Score score){
 
