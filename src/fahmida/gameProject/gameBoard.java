@@ -1,6 +1,6 @@
 package fahmida.gameProject;
 
-public class GameBoard {
+public class gameBoard {
 
     private Score[] scores = null;
     private int capacity = 0;
@@ -8,7 +8,7 @@ public class GameBoard {
 
 
 
-    public GameBoard (int capacity){
+    public gameBoard(int capacity){
 
         this.capacity = capacity;
         scores = new Score [capacity];
@@ -43,6 +43,7 @@ public class GameBoard {
         scores[currentPosition] = null;
         currentPosition--;
         return score;
+
     }
     public void printGameboard(){
         if (currentPosition < 0){
@@ -60,7 +61,7 @@ public class GameBoard {
     }
 
     public static void main(String[] args) {
-        GameBoard gm = new GameBoard(4);
+        gameBoard gm = new gameBoard(4);
 
         gm.scoreAdd(getScoreObject("Upama" , 23));
         gm.scoreAdd(getScoreObject("rahi" , 24));
