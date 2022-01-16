@@ -1,4 +1,4 @@
-package fahmida.gameProject;
+package fahmida.gameProject.linkedListBased;
 
 public class Score {
 

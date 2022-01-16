@@ -1,22 +1,16 @@
-package fahmida.gameProject;
-<<<<<<< HEAD:src/fahmida/gameProject/gameBoard.java
-=======
+package fahmida.gameProject.arrayBased;
 
->>>>>>> 3a6592de2c0eb8cbe99b991954ba346c3d46fee3:src/fahmida/gameProject/GameBoard.java
-
-public class gameBoard {
+public class GameBoard {
 
     private Score[] scores = null;
     private int capacity = 0;
     private int currentPosition = -1;
 
-
-
-    public gameBoard(int capacity){
-
+    public GameBoard(int capacity){
         this.capacity = capacity;
         scores = new Score[capacity];
     }
+
     public void scoreAdd(Score score){
 
         if(currentPosition < capacity - 1 || scores [currentPosition].getScore() < score.getScore()){
@@ -65,7 +59,7 @@ public class gameBoard {
     }
 
     public static void main(String[] args) {
-        gameBoard gm = new gameBoard(4);
+        GameBoard gm = new GameBoard(4);
 
         gm.scoreAdd(getScoreObject("Upama" , 23));
         gm.scoreAdd(getScoreObject("rahi" , 24));
