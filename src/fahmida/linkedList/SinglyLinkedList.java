@@ -75,6 +75,10 @@ public class SinglyLinkedList {
         }
     }
 
+    public Node getHead(){
+        return head;
+    }
+
     public void printList(){
         Node temp = head;
 
@@ -121,6 +125,59 @@ public class SinglyLinkedList {
         return data;
     }
 
+    public int removeAt(int position){
+        int data = 0;
+        if(isEmpty()){
+            System.out.println("list is empty");
+        } else if(position > size ){
+            System.out.println("position invalid");
+        }else if(position == 1){
+            removeFirst();
+        }else if (position == size){
+            removeLast();
+        }else {
+            int i = 1;
+            Node temp = head;
+            Node prev = null;
+
+            while (i < position) {
+                prev = temp;
+                temp = temp.next;
+                i++;
+            }
+            data = temp.data;
+            prev.next = temp.next;
+            size--;
+        }
+        return data;
+    }
+
+    public Node deleAt(int position){
+        Node t = null;
+        if(isEmpty()){
+            System.out.println("list is empty");
+        } else if(position > size ){
+            System.out.println("position invalid");
+        }else if(position == 1){
+            removeFirst();
+        }else if (position == size){
+            removeLast();
+        }else {
+            int i = 1;
+            Node temp = head;
+            Node prev = null;
+
+            while (i < position) {
+                prev = temp;
+                temp = temp.next;
+                i++;
+            }
+            t = temp;
+            prev.next = temp.next;
+        }
+        return t;
+    }
+    
     public void reverseIterative(){
         Node current = head;
         Node prev = null;
@@ -137,6 +194,7 @@ public class SinglyLinkedList {
         tail = t;
         printList();
     }
+
     public void reverseRecursive(Node head){
         if (head.next != null){
             reverseRecursive( head.next);
@@ -145,19 +203,33 @@ public class SinglyLinkedList {
     }
 
     public static void main(String[] args) {
+
+        SinglyLinkedList s = new SinglyLinkedList();
+        s.oldCode();
+    }
+    public void oldCode(){
         SinglyLinkedList s = new SinglyLinkedList();
 
-        s.add(23);
-        s.add(29);
-        s.add(34);
-        s.add(45);
-        s.add(27);
-        s.add(56);
-        s.add(87);
-        s.printList();
-        s.insertAt(3,65);
-        System.out.println(s.getSize());
-        s.reverseRecursive(s.head);
-        s.addFirst(78);
+            s.add(23);
+            s.add(29);
+            s.add(34);
+            s.add(45);
+            s.add(27);
+            s.add(56);
+            s.add(87);
+            s.printList();
+            System.out.println("========");
+            s.insertAt(3,65);
+            System.out.println("list size is:" + s.getSize());
+            s.reverseRecursive(s.head);
+            System.out.println();
+            System.out.println("========");
+            s.addFirst(78);
+            s.printList();
+            System.out.println("=========");
+            System.out.println(s.getSize());
+            s.removeAt(5);
+            s.printList();
+
     }
 }
