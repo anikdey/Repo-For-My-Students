@@ -1,4 +1,4 @@
-package gameProject;
+package fahmida.gameProject.arrayBased;
 
 public class GameBoard {
 
@@ -6,13 +6,11 @@ public class GameBoard {
     private int capacity = 0;
     private int currentPosition = -1;
 
-
-
-    public GameBoard (int capacity){
-
+    public GameBoard(int capacity){
         this.capacity = capacity;
-        scores = new Score [capacity];
+        scores = new Score[capacity];
     }
+
     public void scoreAdd(Score score){
 
         if(currentPosition < capacity - 1 || scores [currentPosition].getScore() < score.getScore()){
@@ -43,6 +41,7 @@ public class GameBoard {
         scores[currentPosition] = null;
         currentPosition--;
         return score;
+
     }
     public void printGameboard(){
         if (currentPosition < 0){
