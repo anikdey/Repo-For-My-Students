@@ -86,6 +86,27 @@ public class BinarySearchTree {
         size++;
     }
 
+    public boolean search(int data){
+
+        if (isEmpty()){
+            return false;
+        }
+        Node temp = root;
+
+        while (temp != null){
+
+            if(temp.data == data){
+                return true;
+            }
+            else if (temp.data>=data){
+                temp = temp.left;
+            }else{
+                temp = temp.right;
+            }
+        }
+        return false;
+    }
+
     public int minValue(){
         Node temp = root;
 
@@ -124,6 +145,7 @@ public class BinarySearchTree {
         bs.add(31);
         bs.add(39);
         bs.add(89);
+        System.out.println("Searching data is available:" + bs.search(34));
         System.out.println( "Minimum value of this tree:" + bs.minValue());
         System.out.println( "Maximum value of this tree:" + bs.maxValue());
     }
