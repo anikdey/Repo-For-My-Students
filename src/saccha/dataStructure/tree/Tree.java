@@ -8,6 +8,7 @@ public class Tree {
     public boolean isEmpty(){
         return  root == null;
     }
+
     public void add(int data){
         TreeNode node = new TreeNode(data,null,null);
         if (isEmpty()){
