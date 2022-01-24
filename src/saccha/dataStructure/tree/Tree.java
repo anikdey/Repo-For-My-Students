@@ -3,8 +3,6 @@ package saccha.dataStructure.tree;
 public class Tree {
     private TreeNode root;
     private TreeNode branches;
-    private int leftLeaf;
-    private int rightLeaf;
     int size =0;
 
     public boolean isEmpty(){
@@ -14,21 +12,18 @@ public class Tree {
         TreeNode node = new TreeNode(data,null,null);
         if (isEmpty()){
             root = node;
-            leftLeaf = data;
         }else{
             TreeNode temp = root;
             while (true){
                 if (temp.data<data){
                     if (temp.right == null){
                         temp.right = node;
-                        rightLeaf = Math.max(rightLeaf,data);
                         break;
                     }
                     temp = temp.right;
                 }else {
                     if (temp.left==null){
                         temp.left = node;
-                        leftLeaf = Math.min(leftLeaf,data);
                         break;
                     }
                     temp = temp.left;
@@ -62,14 +57,22 @@ public class Tree {
         if (isEmpty()){
             return Integer.MIN_VALUE;
         }else {
-            return leftLeaf;
+            TreeNode temp = root;
+            while (temp.left!=null){
+                temp = temp.left;
+            }
+            return temp.data;
         }
     }
     public int maxElement(){
         if (isEmpty()){
             return Integer.MIN_VALUE;
         }else {
-            return rightLeaf;
+            TreeNode temp = root;
+            while (temp.right!=null){
+                temp = temp.right;
+            }
+            return temp.data;
         }
     }
 
