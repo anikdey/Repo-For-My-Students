@@ -177,7 +177,7 @@ public class SinglyLinkedList {
         }
         return t;
     }
-    
+
     public void reverseIterative(){
         Node current = head;
         Node prev = null;
